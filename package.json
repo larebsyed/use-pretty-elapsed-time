@@ -1,8 +1,11 @@
 {
   "name": "use-pretty-elapsed-timer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "use-pretty-elapsed-timer is a custom React hook that provides a timer/stopwatch functionality. It takes a time format string and returns human-readable time strings. The hook also returns start, stop function, and running status. It can take an optional argument for the maximum time in seconds. The use case of this package related to displaying time in human readable formats.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
   "repository": "https://github.com/larebsyed/use-pretty-elapsed-time.git",
   "author": "larebsyed",
   "license": "MIT",
@@ -46,5 +49,23 @@
       "^.+\\.(ts|tsx)?$": "ts-jest",
       "^.+\\.(js|jsx)$": "babel-jest"
     }
-  }
+  },
+  "keywords": [
+    "React",
+    "custom hook",
+    "timer",
+    "stopwatch",
+    "time logic",
+    "state management",
+    "requestAnimationFrame",
+    "elapsed time",
+    "auto-ticks",
+    "time format string",
+    "human-readable time strings",
+    "start function",
+    "stop function",
+    "running status",
+    "display time in human-readable formats",
+    "maximum time in seconds"
+  ]
 }
