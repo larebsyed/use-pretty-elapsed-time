@@ -1,5 +1,6 @@
 # use-pretty-elapsed-timer
-`use-pretty-elapsed-timer` is a custom React hook that provides a timer/stopwatch functionality. It takes a time format string and returns human-readable time strings. The hook also returns start, stop function, and running status. It can take an optional argument for the maximum time in seconds. The use case of this package related to displaying time in human readable formats.
+The `use-pretty-elapsed-timer` package is a custom React hook that handles timers, specifically a stopwatch, and time logic/state in a React component. It uses `requestAnimationFrame` to measure elapsed time and auto-ticks every second. The hook takes a time format string as an argument and returns human-readable time strings. It also returns start, stop functions, and running status. An optional argument for the maximum time in seconds can also be passed. The use case of this package related to displaying time in human readable formats efficiently.
+
 ## Description
 The `use-pretty-elapsed-timer` hook is a timer function that auto-ticks every second. It provides the following functionalities:
 - Start the timer
