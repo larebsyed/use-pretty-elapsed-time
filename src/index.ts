@@ -1,3 +1,3 @@
 import usePrettyElapsedTimer from "./use-pretty-elapsed-timer";
 
-export usePrettyElapsedTimer;
+export default usePrettyElapsedTimer;
