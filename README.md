@@ -17,14 +17,14 @@ npm install use-pretty-elapsed-timer
 import usePrettyElapsedTimer from 'use-pretty-elapsed-timer';
 
 function App() {
-  const { elapsedTime, start, stop, isRunning } = usePrettyElapsedTimer('hh:mm:ss', 60);
+  const { elapsedTime, start, stop, running } = usePrettyElapsedTimer('hh:mm:ss', 60);
 
   return (
     <div>
       <h1>{elapsedTime}</h1>
       <button onClick={start}>Start</button>
       <button onClick={stop}>Stop</button>
-      <p>{isRunning ? 'Timer is running' : 'Timer is not running'}</p>
+      <p>{running ? 'Timer is running' : 'Timer is not running'}</p>
     </div>
   );
 }
@@ -62,14 +62,14 @@ function App() {
 import usePrettyElapsedTimer from 'use-pretty-elapsed-timer';
 
 function App() {
-  const { elapsedTime, start, stop, isRunning } = usePrettyElapsedTimer('mm:ss', 120);
+  const { elapsedTime, start, stop, running } = usePrettyElapsedTimer('mm:ss', 120);
 
   return (
     <div>
       <h1>{elapsedTime}</h1>
       <button onClick={start}>Start</button>
       <button onClick={stop}>Stop</button>
-      <p>{isRunning ? 'Timer is running' : 'Timer is not running'}</p>
+      <p>{running ? 'Timer is running' : 'Timer is not running'}</p>
     </div>
   );
 }
