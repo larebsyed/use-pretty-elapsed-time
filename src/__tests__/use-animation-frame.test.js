@@ -7,11 +7,11 @@ describe("useAnimationFrame", () => {
     const { result, unmount } = renderHook(() => useAnimationFrame(callback));
 
     // Simulate animation frame
-    result.current.animate(1000);
+    result.current.animate.current(1000);
     expect(callback).toHaveBeenCalledWith(1);
 
     // Simulate another animation frame
-    result.current.animate(2000);
+    result.current.animate.current(2000);
     expect(callback).toHaveBeenCalledWith(1);
 
     unmount();

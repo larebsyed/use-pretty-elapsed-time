@@ -7,11 +7,16 @@ const usePrettyElapsedTimer = (formatString: string, maxTime = Infinity) => {
   const [isRunning, setIsRunning] = useState(false);
   const [startTime, setStartTime] = useState<number>(0);
 
-  useAnimationFrame((deltaTime) => {
-    if (isRunning) {
-      setElapsedSeconds((prevElapsedTime) => prevElapsedTime + deltaTime);
-    }
-  });
+  const deltaCallback = useCallback(
+    (deltaTime: number) => {
+      if (isRunning) {
+        setElapsedSeconds((prevElapsedTime) => prevElapsedTime + deltaTime);
+      }
+    },
+    [isRunning]
+  );
+
+  useAnimationFrame(deltaCallback);
 
   useEffect(() => {
     if (elapsedSeconds > maxTime) {
@@ -31,7 +36,7 @@ const usePrettyElapsedTimer = (formatString: string, maxTime = Infinity) => {
 
   const onReset = useCallback(() => {
     setElapsedSeconds(0);
-    setIsRunning(false);
+    setIsRunning(true);
     setStartTime(0);
   }, []);
 
@@ -40,7 +45,7 @@ const usePrettyElapsedTimer = (formatString: string, maxTime = Infinity) => {
     start: onStart,
     stop: onStop,
     reset: onReset,
-    running: isRunning
+    running: isRunning,
   };
 };
 export default usePrettyElapsedTimer;
