@@ -1,0 +1,50 @@
+{
+  "name": "use-pretty-elapsed-time",
+  "version": "1.0.0",
+  "description": "use-pretty-elapsed-timer is a custom React hook that provides a timer/stopwatch functionality. It takes a time format string and returns human-readable time strings. The hook also returns start, stop function, and running status. It can take an optional argument for the maximum time in seconds. The use case of this package related to displaying time in human readable formats.",
+  "main": "index.js",
+  "repository": "https://github.com/larebsyed/use-pretty-elapsed-time.git",
+  "author": "larebsyed",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.6",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "@testing-library/react-hooks": "^8.0.1",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "react-test-renderer": "^18.2.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "verbose": true,
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ts",
+      "tsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80
+      }
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest",
+      "^.+\\.(js|jsx)$": "babel-jest"
+    }
+  }
+}
